@@ -1,75 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Vaibhav - Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Vaibhav Kumar</h1>
-            <p class="subtitle">MCA Student | Aspiring Software Developer</p>
-            <nav class="navbar">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <a href="https://drive.google.com/drive/folders/1VfUtcEaOvU_XZvWOhaobW-v6zj748s9E?usp=sharing"> Click Me </a>
-            <p>Hello! I'm a passionate MCA student with a strong foundation in software development. I aim to collaborate with innovative teams and make meaningful contributions to organizational success.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <img src="profile.jpg" alt="My Photo" class="profile-pic">
+            <h1>Hello, I'm Vaibhav Kumar</h1>
+            <p>MCA Student | Aspiring Software Developer</p>
+            <!-- <p>A passionate software developer focused on innovation and excellence.</p> -->
+            <a href="#contact" class="btn">Get in Touch</a>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>C++</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React.js, Node.js, MongoDB</li>
-                <li>Teamwork, Problem-Solving, Leadership</li>
-            </ul>
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm a passionate MCA student with expertise in web and software development. I enjoy building
+            solutions that make a difference and am always eager to learn and grow. My goal is to collaborate with
+            innovative teams and contribute meaningfully to projects.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills" data-aos="fade-left">
+        <h2>Skills</h2>
+        <div class="skills-container">
+
+            <!-- Technical Skills -->
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skill">
+                    <h3>C++</h3>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 70%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>HTML, CSS, JavaScript</h3>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 80%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>React.js</h3>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 75%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Node.js</h3>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 70%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>MongoDB</h3>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 65%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interpersonal Skills -->
+            <div class="skill-category">
+                <h3>Interpersonal Skills</h3>
+                <div class="skill">
+                    <h4>Teamwork</h4>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 85%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Adaptability</h4>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 75%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Problem-Solving</h4>
+                    <div class="progress-bar"
+                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="progress" style="width: 80%; height: 100%; background: #ffa726;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
+    <!-- Projects Section -->
+    <section id="projects" class="projects" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-card" data-aos="zoom-in">
                 <h3>Tic-Tac-Toe</h3>
-                <p>A simple yet engaging tic-tac-toe game implemented in C++.</p>
+                <p>A simple and engaging game built using C++.</p>
+                <a href="https://github.com/yourname/tic-tac-toe" target="_blank" class="btn">View Project</a>
             </div>
-            <div class="project">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                 <h3>E-Commerce Frontend</h3>
-                <p>A stylish and functional frontend for an e-commerce platform using React.js.</p>
+                <p>Modern and responsive e-commerce UI developed with React.js.</p>
+                <a href="https://yourwebsite.com/ecommerce" target="_blank" class="btn">View Project</a>
             </div>
-            <div class="project">
-                <h3>College Gate Pass System</h3>
-                <p>A comprehensive web application for gate pass management using React.js, Node.js, and MongoDB.</p>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Gate Pass System</h3>
+                <p>A web application for managing college gate passes using React.js, Node.js, and MongoDB.</p>
+                <a href="https://yourwebsite.com/gatepass" target="_blank" class="btn">View Project</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: yourname@example.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        </div>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certified JavaScript Developer - XYZ Academy</li>
+            <li>React.js Masterclass Completion - ABC Institute</li>
+            <li>Web Development Bootcamp - DEF School</li>
+        </ul>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-aos="fade-right">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>Email: vaibhavkr473@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vaibhav Kumar. All Rights Reserved.</p>
+        <div class="socials">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourname" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
 
-    <script src="portfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
+
 </html>
