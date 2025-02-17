@@ -3,32 +3,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
+/* Dark Mode Styles (Default) */
+:root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --header-bg: #1f1f1f;
+    --card-bg: #1f1f1f;
+    --progress-bg: #333333;
+    --primary-color: #ffa726;
+    --secondary-color: #f57c00;
+}
+
+/* Light Mode Styles */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --header-bg: #f0f0f0b0;
+    --card-bg: #f5f5f5;
+    --progress-bg: #dddddde0;
+    --primary-color: #ffa726;
+    --secondary-color: #f57c00;
+}
+
+/* Header */
 header {
-    background-color: #1f1f1f;
+    background-color: var(--header-bg);
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.profile-pic {
-    width: 200px;
-    height: 250px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid #f0f0f0;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 header nav ul {
@@ -43,15 +61,49 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #f0f0f0;
+    color: var(--text-color);
     font-weight: bold;
     padding: 5px 10px;
     transition: color 0.3s, transform 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #ffa726;
+    color: var(--primary-color);
     transform: scale(1.1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    padding: 0.625rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Hero Section */
@@ -60,26 +112,26 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ffa726, #f57c00);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     text-align: center;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    color: #121212;
+    color: var(--text-color);
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content p {
     font-size: 1.5rem;
-    color: #1f1f1f;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
 .hero-content .btn {
-    background-color: #121212;
-    color: #ffa726;
+    background-color: var(--header-bg);
+    color: var(--primary-color);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -88,27 +140,21 @@ header nav ul li a:hover {
 }
 
 .hero-content .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffffff;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     transform: translateY(-3px);
 }
 
 /* About Section */
 .about {
     padding: 60px 20px;
-    background-color: #1f1f1f;
+    background-color: var(--card-bg);
     text-align: center;
-}
-
-.about h2 {
-    font-size: 2.5rem;
-    color: #ffa726;
-    margin-bottom: 20px;
 }
 
 .about p {
     font-size: 1.2rem;
-    color: #e0e0e0;
+    color: var(--text-color);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -117,13 +163,13 @@ header nav ul li a:hover {
 .skills {
     padding: 60px 20px;
     text-align: center;
-    background-color: #121212;
+    background-color: var(--bg-color);
 }
 
-.skills h2 {
+.about h2, .skills h2, .projects h2, .contact h2, .certifications h2 {
     font-size: 2.5rem;
-    color: #ffa726;
-    margin-bottom: 30px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
 .skills-container {
@@ -139,7 +185,7 @@ header nav ul li a:hover {
 
 .skill-category h3 {
     font-size: 1.5rem;
-    color: #f0f0f0;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -148,16 +194,29 @@ header nav ul li a:hover {
     text-align: left;
 }
 
-.skill h3,
-.skill h4 {
+.skill h3 {
     font-size: 1.2rem;
-    color: #f0f0f0;
+    color: var(--text-color);
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: var(--progress-bg);
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background: var(--primary-color);
+    height: 100%;
+    animation: fillProgress 2s ease-in-out forwards;
 }
 
 /* Projects Section */
 .projects {
     padding: 60px 20px;
-    background-color: #1f1f1f;
+    background-color: var(--card-bg);
     text-align: center;
 }
 
@@ -168,16 +227,10 @@ header nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.projects h2 {
-    font-size: 2.5rem;
-    color: #ffa726;
-    margin-bottom: 30px;
-}
-
 .project-card {
-    background-color: #121212;
-    color: #f0f0f0;
-    border: 2px solid #333;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--progress-bg);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -192,13 +245,13 @@ header nav ul li a:hover {
 }
 
 .project-card h3 {
-    color: #ffa726;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
 .project-card .btn {
-    background-color: #ffa726;
-    color: #121212;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -208,14 +261,14 @@ header nav ul li a:hover {
 }
 
 .project-card .btn:hover {
-    background-color: #ff9800;
+    background-color: var(--secondary-color);
     transform: scale(1.1);
 }
 
 /* Certifications Section */
 .certifications {
     padding: 60px 20px;
-    background-color: #121212;
+    background-color: var(--bg-color);
     text-align: center;
 }
 
@@ -225,7 +278,7 @@ header nav ul li a:hover {
 }
 
 .certifications li {
-    color: #e0e0e0;
+    color: var(--text-color);
     margin: 10px 0;
     font-size: 1.2rem;
 }
@@ -233,14 +286,8 @@ header nav ul li a:hover {
 /* Contact Section */
 .contact {
     padding: 60px 20px;
-    background-color: #121212;
+    background-color: var(--bg-color);
     text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    color: #ffa726;
-    margin-bottom: 30px;
 }
 
 .contact form {
@@ -252,7 +299,7 @@ header nav ul li a:hover {
 .contact label {
     display: block;
     font-size: 1rem;
-    color: #f0f0f0;
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
@@ -261,15 +308,15 @@ header nav ul li a:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #333;
+    border: 1px solid var(--progress-bg);
     border-radius: 5px;
-    background-color: #1f1f1f;
-    color: #f0f0f0;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 .contact button {
-    background-color: #ffa726;
-    color: #121212;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -279,7 +326,7 @@ header nav ul li a:hover {
 }
 
 .contact button:hover {
-    background-color: #ff9800;
+    background-color: var(--secondary-color);
     transform: translateY(-3px);
 }
 
@@ -287,13 +334,13 @@ header nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px 10px;
-    background-color: #1f1f1f;
-    color: #f0f0f0;
+    background-color: var(--header-bg);
+    color: var(--text-color);
     margin-top: 20px;
 }
 
 footer .socials a {
-    color: #ffa726;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin: 0 10px;
     transition: transform 0.3s;
@@ -323,5 +370,21 @@ footer .socials a:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .project-list {
+        flex-direction: column;
     }
 }
