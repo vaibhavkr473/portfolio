@@ -166,7 +166,11 @@ header nav ul li a:hover {
     background-color: var(--bg-color);
 }
 
-.about h2, .skills h2, .projects h2, .contact h2, .certifications h2 {
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2,
+.certifications h2 {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -176,6 +180,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .skill-category {
@@ -374,7 +379,7 @@ footer .socials a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header nav ul {
         flex-direction: column;
         align-items: center;
@@ -386,5 +391,45 @@ footer .socials a:hover {
 
     .project-list {
         flex-direction: column;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
     }
 }
