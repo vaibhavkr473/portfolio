@@ -1,4 +1,13 @@
-// Theme Toggle with Persistence
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+themeToggle.addEventListener('click', () => {
+    document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+    themeIcon.classList.toggle('fa-moon');
+    themeIcon.classList.toggle('fa-sun');
+});
+
+/*
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('i');
 const currentTheme = localStorage.getItem('theme') || 'dark';
@@ -22,7 +31,8 @@ function updateThemeIcon(theme) {
         themeIcon.classList.add('fa-moon');
     }
 }
-
+*/
+    
 // Improved Contact Form Handling
 document.addEventListener("DOMContentLoaded", function () {
     // Using the exact selector to match your HTML structure
