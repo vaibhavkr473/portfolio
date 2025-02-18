@@ -40,13 +40,15 @@ body {
 }
 
 /* Header */
-header {
-    background-color: var(--header-bg);
-    padding: 10px 20px;
+.main-header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2rem;
 }
 
 header nav ul {
@@ -63,6 +65,7 @@ header nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+    font-size: large;
     padding: 5px 10px;
     transition: color 0.3s, transform 0.3s;
 }
@@ -76,7 +79,7 @@ header nav ul li a:hover {
 .theme-toggle {
     position: fixed;
     top: 1rem;
-    right: 1.5rem;
+    right: 2rem;
     padding: 0.625rem;
     border-radius: 50%;
     border: none;
@@ -412,6 +415,10 @@ footer .socials a:hover {
 }
 
 @media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
