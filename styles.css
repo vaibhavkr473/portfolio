@@ -99,31 +99,45 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Scroll to Top */
-.scroll-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+/* Skill Block */
+.skill-block {
     background-color: var(--primary-color);
     color: var(--bg-color);
-    padding: 10px;
-    border-radius: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    width: 30px; /* Adjust width to make it circular */
-    height: 30px; /* Adjust height to make it circular */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-weight: bold;
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.scroll-to-top:hover {
-    transform: scale(1.2);
+.skill-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.scroll-to-top a {
-    color: var(--bg-color);
-    font-size: 1rem;
+/* Responsive Design for Skill Block */
+@media (max-width: 1024px) {
+    .skill-block {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-block {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-block {
+        width: calc(50% - 10px);
+    }
 }
 
 /* Show scroll-to-top button when scrolling */
@@ -424,8 +438,8 @@ body.scrolled .scroll-to-top {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s;
-    width: 40px; /* Adjust width to make it circular */
-    height: 40px; /* Adjust height to make it circular */
+    width: 30px; /* Adjust width to make it circular */
+    height: 30px; /* Adjust height to make it circular */
 }
 
 .scroll-to-top:hover {
@@ -434,7 +448,7 @@ body.scrolled .scroll-to-top {
 
 .scroll-to-top a {
     color: var(--bg-color);
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /* Show scroll-to-top button when scrolling */
