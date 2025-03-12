@@ -1,31 +1,3 @@
-// Theme Toggle
-/*
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
-const currentTheme = localStorage.getItem('theme') || 'dark';
-
-document.body.dataset.theme = currentTheme;
-updateThemeIcon(currentTheme);
-
-themeToggle.addEventListener('click', () => {
-    const newTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-    document.body.dataset.theme = newTheme;
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-    if (theme === 'light') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-    }
-}
-*/
-    
-// Improved Contact Form Handling
 document.addEventListener("DOMContentLoaded", function () {
     // Using the exact selector to match your HTML structure
     const contactForm = document.querySelector(".contact-content .contact-form form");
@@ -71,5 +43,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 submitButton.disabled = false;
                 submitButton.textContent = "Send Message";
             });
+    });
+
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    themeToggle.addEventListener('click', () => {
+        document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+        themeIcon.classList.toggle('fa-moon');
+        themeIcon.classList.toggle('fa-sun');
+    });
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+
+    const scrollToTop = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
     });
 });
