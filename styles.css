@@ -99,6 +99,38 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Scroll to Top */
+.scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 30px; /* Adjust width to make it circular */
+    height: 30px; /* Adjust height to make it circular */
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.2);
+}
+
+.scroll-to-top a {
+    color: var(--bg-color);
+    font-size: 1rem;
+}
+
+/* Show scroll-to-top button when scrolling */
+body.scrolled .scroll-to-top {
+    display: flex;
+}
+
 /* Menu Toggle */
 .menu-toggle {
     display: none;
