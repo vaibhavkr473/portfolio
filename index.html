@@ -27,10 +27,11 @@
 
 <body>
     <!-- Header Section -->
-    <header>
-        <nav>
+    <header class="main-header sticky-header">
+        <nav class="nav-container">
             <div class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -50,12 +51,8 @@
         <div class="hero-content" data-aos="fade-up">
             <img src="profile.jpg" alt="Vaibhav Kumar - Web Developer Profile Picture" class="profile-pic"
                 loading="lazy">
-<!--             <h1>Vaibhav Kumar - Web Developer & Software Engineer</h1> -->
-<!--             <p>MCA Student | Passionate Software Developer</p> -->
-
             <h1>Hello, I'm Vaibhav Kumar</h1>
             <p>MCA Student | Aspiring Software Developer</p>
-            <!-- <p>A passionate software developer focused on innovation and excellence.</p> -->
             <a href="#contact" class="btn">Get in Touch</a>
         </div>
     </section>
@@ -69,7 +66,8 @@
             innovative teams and contribute meaningfully to projects.
             <br>
             <a href="#projects">Check out my projects ||</a>
-            <a href="https://drive.google.com/file/d/11r8Dy8Caa39T19MdYPkp4lkevHEGt-sw/view?usp=sharing"  target="_blank">Resume</a>
+            <a href="https://drive.google.com/file/d/11r8Dy8Caa39T19MdYPkp4lkevHEGt-sw/view?usp=sharing"
+                target="_blank">Resume</a>
         </p>
     </section>
 
@@ -77,71 +75,24 @@
     <section id="skills" class="skills" data-aos="fade-left">
         <h2>Skills</h2>
         <div class="skills-container">
-
             <!-- Technical Skills -->
             <div class="skill-category">
                 <h3>Technical Skills</h3>
-                <div class="skill">
-                    <h3>C++</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 70%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>HTML, CSS, JavaScript</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 80%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>React.js</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 75%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Node.js</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 70%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>MongoDB</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 65%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
+                <div class="skill-block">HTML, CSS</div>
+                <div class="skill-block">BootStrap</div>
+                <div class="skill-block">JavaScript</div>
+                <div class="skill-block">React.js</div>
+                <div class="skill-block">C++</div>
+                <div class="skill-block">Node.js</div>
+                <div class="skill-block">MySQL</div>
+                <div class="skill-block">MongoDB</div>
             </div>
-
             <!-- Interpersonal Skills -->
             <div class="skill-category">
                 <h3>Interpersonal Skills</h3>
-                <div class="skill">
-                    <h3>Teamwork</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 85%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Adaptability</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 75%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Problem-Solving</h3>
-                    <div class="progress-bar"
-                        style="background: #333; height: 10px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
-                        <div class="progress" style="width: 80%; height: 100%; background: #ffa726;"></div>
-                    </div>
-                </div>
+                <div class="skill-block">Teamwork</div>
+                <div class="skill-block">Adaptability</div>
+                <div class="skill-block">Problem-Solving</div>
             </div>
         </div>
     </section>
@@ -222,6 +173,10 @@
         </div>
     </section>
 
+    <div class="scroll-to-top">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
     <footer>
         <p>&copy; 2025 Vaibhav Kumar. All Rights Reserved.</p>
         <div class="socials">
@@ -229,9 +184,6 @@
                     class="fab fa-linkedin"></i></a>
             <a href="https://github.com/vaibhavkr473" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://twitter.com/vaibhavkr473" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="scroll-to-top">
-            <a href="#home"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
 
@@ -241,16 +193,8 @@
             duration: 1000,
             once: true
         });
-
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
-        themeToggle.addEventListener('click', () => {
-        document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-        themeIcon.classList.toggle('fa-moon');
-        themeIcon.classList.toggle('fa-sun');
-        });
     </script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
