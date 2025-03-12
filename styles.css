@@ -116,14 +116,12 @@ header nav ul li a:hover {
 .menu-toggle.active+.nav-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    /* Align items to the end */
-    width: 35%;
-    /* Cover the entire width */
+    align-items: normal;
+    width: 40%;
     position: absolute;
     top: 60px;
     right: 0;
-    left: 60%;
+    left: 55%;
     background-color: var(--header-bg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     padding: .5rem;
