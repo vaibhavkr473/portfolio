@@ -116,7 +116,7 @@ header nav ul li a:hover {
 .menu-toggle.active+.nav-list {
     display: flex;
     flex-direction: column;
-    align-items: normal;
+    align-items: center;
     width: 40%;
     position: absolute;
     top: 60px;
