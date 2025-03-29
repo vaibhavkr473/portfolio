@@ -441,6 +441,11 @@ body.scrolled .scroll-to-top {
     display: flex;
 }
 
+p .email {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
 /* Footer */
 footer {
     text-align: center;
