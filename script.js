@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Using the exact selector to match your HTML structure
+
     const contactForm = document.querySelector(".contact-content .contact-form form");
 
-    // Add debugging
-    console.log("Found form:", contactForm);
+        // Add debugging
+        console.log("Found form:", contactForm);
 
-    if (!contactForm) {
+        if (!contactForm) {
         console.error("Contact form not found! Check your HTML structure");
         return;
     }
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = true;
         submitButton.textContent = "Sending...";
 
-        fetch("https://formspree.io/f/{your_form_id}", {
+        fetch("https://formspree.io/f/xwplgdnr", {
             method: "POST",
             body: formData,
             headers: {
